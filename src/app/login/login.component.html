@@ -1,0 +1,41 @@
+<div class="container">
+    <input id="register_toggle" type="checkbox">
+    <div class="slider">
+        <form class="form">
+            <span class="title">Login</span>
+            <div class="form_control">
+                <input required="" class="input" type="text">
+                <label class="label">Username</label>
+            </div>
+            <div class="form_control">
+                <input required="" class="input" type="password">
+                <label class="label">Password</label>
+            </div>
+            <button>Login</button>
+
+            <span class="bottom_text">Don't have an account? <label class="swtich" for="register_toggle">Sign Up</label>
+            </span>
+        </form>
+        <form class="form" [formGroup]="registerForm">
+            <span class="title">Sign Up</span>
+            <div class="form_control">
+                <input formControlName="uname" name="uname" id="uname" required="" class="input" type="text">
+                <label class="label">Username</label>
+            </div>
+            <div class="form_control">
+                <input formControlName="number" id="number" name="number" required="" class="input" type="number">
+                <label class="label">Number</label>
+            </div>
+            <div class="form_control">
+                <input formControlName="psw" id="psw" name="psw" required="" class="input" type="password">
+                <label class="label">Password</label>
+            </div>
+            <button (click)="Register()" type="submit">Sign Up</button>
+
+            <span class="bottom_text">{{data1}}Already have an account? <label class="swtich" for="register_toggle">Sign
+                    In</label> </span>
+        </form>
+
+
+    </div>
+</div>

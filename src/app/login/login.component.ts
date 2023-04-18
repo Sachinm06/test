@@ -20,20 +20,20 @@ export class LoginComponent {
 
   registerForm = this.fb.group({
     uname: ['', [Validators.required, Validators.pattern('[a-zA-Z]+')]],
-    number: ['', [Validators.required, Validators.pattern('[0-9]+')]],
+    no: ['', [Validators.required, Validators.pattern('[0-9]+')]],
     psw: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]]
   })
 
-  Register() {
+  aregister() {
     
     this.data1=localStorage.getItem("user")
     var uname = this.registerForm.value.uname
-    var number = this.registerForm.value.number
+    var no = this.registerForm.value.no
     var psw = this.registerForm.value.psw
 
     if (this.registerForm.valid) {
 
-      this.ds.register(uname, number, psw).subscribe((result: any) => {
+      this.ds.register(uname,no,psw).subscribe((result:any) => {
         alert(result.message)
       },
         result => {

@@ -9,12 +9,12 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  register(uname: any, number: any, psw: any) {
-    const data = { uname, number, psw }  
+  register(uname: any, no: any, psw: any) {
+    const data = { uname, no, psw }  
     console.log(data);
-    localStorage.setItem("user",data.uname)
-    localStorage.setItem("number",data.number)
-    localStorage.setItem("password",data.psw)
+    // localStorage.setItem("user",data.uname)
+    // localStorage.setItem("number",data.no)
+    // localStorage.setItem("password",data.psw)
     
 
     return this.http.post('http://localhost:3001/register', data)

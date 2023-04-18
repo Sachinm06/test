@@ -19,20 +19,20 @@
         <form class="form" [formGroup]="registerForm">
             <span class="title">Sign Up</span>
             <div class="form_control">
-                <input formControlName="uname" name="uname" id="uname" required="" class="input" type="text">
+                <input formControlName="uname" name="un" id="unam" required="" class="input" type="text">
                 <label class="label">Username</label>
             </div>
             <div class="form_control">
-                <input formControlName="number" id="number" name="number" required="" class="input" type="number">
+                <input formControlName="no" id="num" name="numbe" required="" class="input" type="number">
                 <label class="label">Number</label>
             </div>
             <div class="form_control">
-                <input formControlName="psw" id="psw" name="psw" required="" class="input" type="password">
+                <input formControlName="psw" id="psw1" name="psw2" required="" class="input" type="password">
                 <label class="label">Password</label>
             </div>
-            <button (click)="Register()" type="submit">Sign Up</button>
+            <button (click)="aregister()" type="submit">Sign Up</button>
 
-            <span class="bottom_text">{{data1}}Already have an account? <label class="swtich" for="register_toggle">Sign
+            <span class="bottom_text">Already have an account? <label class="swtich" for="register_toggle">Sign
                     In</label> </span>
         </form>
 
